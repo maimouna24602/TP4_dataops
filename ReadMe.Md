@@ -2,16 +2,16 @@
 
 Pipeline automatisé de collecte et nettoyage de données publiques mauritaniennes (Budget, Football, INPC).
 
-## 📋 Description
+##  Description
 
 Ce projet implémente un pipeline DataOps reproductible qui :
-- 🌐 Collecte des données HTML depuis des sites web publics
-- 📄 Extrait des tableaux depuis des fichiers PDF
-- 🧹 Nettoie et structure les données avec pandas
-- 🐳 S'exécute dans un container Docker
-- 📊 Génère des métriques et rapports d'exécution
+-  Collecte des données HTML depuis des sites web publics
+-  Extrait des tableaux depuis des fichiers PDF
+-  Nettoie et structure les données avec pandas
+- S'exécute dans un container Docker
+-  Génère des métriques et rapports d'exécution
 
-## 🎯 Sources de données
+##  Sources de données
 
 | Source | Type | URL |
 |--------|------|-----|
@@ -19,7 +19,7 @@ Ce projet implémente un pipeline DataOps reproductible qui :
 | **Football** | HTML | https://www.tntsports.co.uk/football/mauritanian-league/calendar-results.shtml |
 | **INPC** | PDF | https://ansade.mr/fr/note-mensuelle-de-lindice-national-des-prix-a-la-consommation-inpc-decembre-2025/ |
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 TP4_DataOps/
@@ -38,7 +38,7 @@ TP4_DataOps/
 └── README.md
 ```
 
-## 📦 Fichiers de sortie
+##  Fichiers de sortie
 
 Le pipeline génère **5 fichiers** dans `./shared_out/` :
 
@@ -48,21 +48,21 @@ Le pipeline génère **5 fichiers** dans `./shared_out/` :
 4. **`kpi.json`** - Métriques de collecte (statuts, lignes, erreurs)
 5. **`run_report.md`** - Rapport d'exécution lisible
 
-## 🚀 Installation et exécution
+##  Installation et exécution
 
 ### Prérequis
 - Docker
 - Docker Compose
 - Git
 
-### 1️⃣ Cloner le repository
+###  Cloner le repository
 
 ```bash
 git clone https://github.com/VOTRE_USERNAME/TP4_DataOps.git
 cd TP4_DataOps
 ```
 
-### 2️⃣ Configuration (optionnel)
+### Configuration (optionnel)
 
 Copiez le fichier d'exemple et modifiez les paramètres si nécessaire :
 
@@ -80,7 +80,7 @@ OUTPUT_DIR=/out
 USER_AGENT=Mozilla/5.0 (TP4 DataOps Pipeline)
 ```
 
-### 3️⃣ Lancer le pipeline
+###  Lancer le pipeline
 
 ```bash
 docker-compose up --build
@@ -91,7 +91,7 @@ Ou en mode détaché :
 docker-compose up --build -d
 ```
 
-### 4️⃣ Vérifier les résultats
+### Vérifier les résultats
 
 ```bash
 ls -lh shared_out/
@@ -99,7 +99,7 @@ cat shared_out/kpi.json
 cat shared_out/run_report.md
 ```
 
-## 📊 Schémas des données
+## Schémas des données
 
 ### budget_execution.csv
 | Colonne | Type | Description |
@@ -130,7 +130,7 @@ cat shared_out/run_report.md
 | `variation_annuelle` | float | Variation annuelle (%) |
 | `scraped_at` | datetime | Horodatage du scraping |
 
-## 🔄 Idempotence
+##  Idempotence
 
 **Stratégie** : Écrasement propre des fichiers à chaque exécution.
 
@@ -148,7 +148,7 @@ cat shared_out/run_report.md
 - **camelot-py** - Extraction de tableaux PDF
 - **Docker & Docker Compose** - Conteneurisation
 
-## 📝 Règles de nettoyage
+## Règles de nettoyage
 
 ### Budget
 - Conversion des montants en numériques
@@ -168,7 +168,7 @@ cat shared_out/run_report.md
 - Conversion des pourcentages en float
 - Normalisation des noms de colonnes
 
-## ⚠️ Limitations connues
+##  Limitations connues
 
 1. **Stabilité des sources** : Les sites web peuvent changer de structure
 2. **Format PDF** : L'extraction dépend de la mise en page du PDF
@@ -177,7 +177,7 @@ cat shared_out/run_report.md
 5. **Langue** : Extraction optimisée pour le français
 6. **Java** : `camelot-py` nécessite Java (inclus dans l'image Docker)
 
-## 📄 Logs et debugging
+##  Logs et debugging
 
 Les logs sont affichés sur la sortie standard :
 
@@ -196,7 +196,7 @@ Format des logs :
 2026-01-19 14:30:02 - ERROR - Football scraping failed: Connection timeout
 ```
 
-## 🧪 Tests manuels
+##  Tests manuels
 
 ### Test 1 : Build de l'image
 ```bash
@@ -223,17 +223,8 @@ print(df_budget.info())
 print(df_budget.head())
 ```
 
-## 📧 Contact
 
-- **Auteur** : [Votre Nom]
-- **Email** : [votre.email@example.com]
-- **Année** : 2025-2026
-
-## 📜 Licence
-
-Ce projet est réalisé dans le cadre du TP4 DataOps.
-
-## 🔗 Liens utiles
+##  Liens utiles
 
 - [Documentation camelot-py](https://camelot-py.readthedocs.io/)
 - [Documentation pandas](https://pandas.pydata.org/docs/)
