@@ -168,6 +168,9 @@ cat shared_out/run_report.md
 - Conversion des pourcentages en float
 - Normalisation des noms de colonnes
 
+
+Limites : on peut pas scraper le premier avec Beautifulsoup car il ne peut pas manipuler JavaScript it can only manipulate html
+ 
 ##  Limitations connues
 
 1. **Stabilité des sources** : Les sites web peuvent changer de structure
