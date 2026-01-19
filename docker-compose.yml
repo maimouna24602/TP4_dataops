@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  pipeline:
+    build: .
+    volumes:
+      - ./shared_out:/out
+    environment:
+      - OUTPUT_DIR=/out
