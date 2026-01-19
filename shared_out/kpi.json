@@ -3,14 +3,14 @@
     "status": "FAIL",
     "rows_extracted": 0,
     "missing_values": 0,
-    "timestamp": "2026-01-19T13:23:33.083299",
+    "timestamp": "2026-01-19T13:38:08.291493",
     "error": "No data extracted from budget source"
   },
   "football": {
     "status": "OK",
     "rows_extracted": 7,
     "missing_values": 0,
-    "timestamp": "2026-01-19T13:23:34.009052",
+    "timestamp": "2026-01-19T13:38:08.763357",
     "error": null,
     "columns": [
       "home_team",
@@ -22,12 +22,12 @@
     "status": "FAIL",
     "rows_extracted": 0,
     "missing_values": 0,
-    "timestamp": "2026-01-19T13:23:37.579086",
+    "timestamp": "2026-01-19T13:38:11.211657",
     "error": "get_pdf_link() got an unexpected keyword argument 'timeout'",
     "pdf_url": null
   },
   "pipeline": {
-    "execution_timestamp": "2026-01-19T13:23:37.579310",
+    "execution_timestamp": "2026-01-19T13:38:11.211911",
     "total_sources": 3,
     "successful_sources": 1,
     "failed_sources": 2
